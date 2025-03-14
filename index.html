@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Libre+Barcode+39&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script rel="script.js" defer></script>
+    <title>Bean Matters POS</title>
+</head>
+<body>
+    <header>
+        <h1>Cafe POS</h1>
+    </header>
+
+    <main class="main-container flex-row">
+        <section class="order flex-column">
+            <article class="receipt flex-column">
+                <div class="company-info flex-column">
+                    <p id="company-name">Bean Matters Coffee Collection</p>
+                    <p id="company-address">Pabayo-Gomez, Divisoria</p>
+                    <p id="company-city">Cagayan de Oro City</p>
+                    <p id="company-phone">0969 214 6358</p>
+                    <p id="invoice-number">Invoice #1234</p>
+                </div>
+                <div class="receipt-details">
+                    <table class="details-detail">
+                        <thead>
+                            <tr>
+                                <td class="dotted-border" colspan="5"></td>
+                            </tr>
+                            <tr>
+                                <td class="empty-border" colspan="5"></td>
+                            </tr>
+                            <tr>
+                                <th class="description">Description</th>
+                                <th class="quantity">Qty</th>
+                                <th class="price">Price</th>
+                                <th class="subtotal">Sub</th>
+                                <th class="delete">Del</th>
+                            </tr>
+                            <tr>
+                                <td class="dotted-border" colspan="5"></td>
+                            </tr>
+                            <tr>
+                                <td class="empty-border" colspan="5"></td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="description">Fries</th>
+                                <td class="quantity">1</th>
+                                <td class="price">110.00</th>
+                                <td class="subtotal">110.00</th>
+                                <td class="delete"><i class="fa-solid fa-delete-left"></i></th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="receipt-summary">
+                    <table class="summary-table">
+                        <tbody class="summary-table" id="total-summary">
+                            <tr>
+                                <td class="dotted-border" colspan="3"></td>
+                            </tr>
+                            <tr>
+                                <td class="empty-border" colspan="3"></td>
+                            </tr>
+                            <tr>
+                                <td>Subtotal:</td>
+                                <td id="subtotal-summary">Php 0.00</td>
+                            </tr>
+                            <tr>
+                                <td>Tax:</td>
+                                <td id="subtotal-tax">Php 0.00</td>
+                            </tr>
+                            <tr>
+                                <td>Grand Total:</td>
+                                <td id="grandtotal-summary">Php 0.00</td>
+                            </tr>
+                        </tbody>
+                        <tbody class="summary-table" id="payment-summary">
+                            <tr>
+                                <td>Amount Paid:</td>
+                                <td id="amount-paid">Php 0.00</td>
+                            </tr>
+                            <tr>
+                                <td id="tip-change-title">Change:</td>
+                                <td id="tip-change-amount">Php 0.00</td>
+                            </tr>
+                            <tr>
+                                <td>Payment Type:</td>
+                                <td id="payment-type"></td>
+                            </tr>
+                            <tr>
+                                <td class="dotted-border" colspan="3"></td>
+                            </tr>
+                            <tr>
+                                <td class="empty-border" colspan="3"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="receipt-footer flex-column">
+                    <p id="receipt-message">Thank you, come again!</p>
+                    <p id="barcode">Barcode</p>
+                </div>
+            </article>
+            <div class="toolbar flex-row">
+                <i class="fa-solid fa-money-bill-1-wave toolbar-icon"></i>
+                <i class="fa-solid fa-credit-card toolbar-icon"></i>
+                <i class="fa-solid fa-trash toolbar-icon"></i>
+            </div>
+        </section>
+        <section class="menu-payment grid"></section>
+    </main>
+</body>
+</html>
